@@ -15,9 +15,9 @@ User can create account securely as we have hashed the user password for safety.
 
 ## How to Run
 - copy the github repo
-- Install the required dependecies(Pymonogo, python-dotenv, cryptography.fernet)
+- Install the required dependecies (Pymonogo, python-dotenv, cryptography.fernet)
 - Configure your env file and the mongodb url
-- Open your terminal and the python program
+- Open your terminal and run the python program
 - Create account and use the app
 
 ## Technologies

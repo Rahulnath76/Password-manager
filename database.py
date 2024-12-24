@@ -1,13 +1,14 @@
 from pymongo import MongoClient
+import os
 
 def database():
     try:
-        client = MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS=5000)
+        client = MongoClient(os.environ.get('DB_LINK'), serverSelectionTimeoutMS=5000)
         client.admin.command('ping')
         mydb = client['password_manager']
         print("connection succesfull")
         return mydb
     
     except Exception as e:
-        print(f"Connection failed: {e}")
+        print(f"Connection failed: \n{e}")
         return
